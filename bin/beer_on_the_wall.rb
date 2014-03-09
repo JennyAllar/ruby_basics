@@ -1,6 +1,11 @@
 puts "Enter a number 1 through 99."
 bottles = gets.chomp
-bottles = bottles.to_i
+if bottles == ""
+  puts "I need to know how many bottles to sing!"
+else
+  bottles = bottles.to_i
+end
+
 
 while bottles >= 0
   if bottles > 2

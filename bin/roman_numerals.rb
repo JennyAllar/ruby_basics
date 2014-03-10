@@ -1,6 +1,4 @@
-input = gets.chomp.to_i
-
-roman_numerals = {
+ROMAN_NUMERALS = {
   1000 => "M",
   900 => "CM",
   500 => "D",
@@ -16,4 +14,20 @@ roman_numerals = {
   1 => "I"
 }
 
-puts roman_numerals
+input = gets.chomp.to_i
+
+output = ""
+
+while (input > 0)
+  ROMAN_NUMERALS.each do |key, value|
+    number_of_tens = input / key
+
+    number_of_tens.times do
+      output << value
+    end
+
+    input -= number_of_tens * key
+  end
+end
+
+puts output

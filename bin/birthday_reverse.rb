@@ -36,4 +36,11 @@ class BirthdayReverse
       "December"
     end
   end
+
+  def old
+    t = Time.now.year
+
+    t - @m[2].to_i
+
+  end
 end

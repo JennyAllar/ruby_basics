@@ -8,4 +8,12 @@ describe BirthdayReverse do
   result = bday.format
   expect(result).to eq "November 24, 1980"
   end
+
+
+  it "returns years old" do
+    bday = BirthdayReverse.new("2-9-1980")
+
+    result = bday.old
+    expect(result).to eq 34
+  end
 end
